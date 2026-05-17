@@ -1,42 +1,273 @@
-# Dedao Board
+# Dedao Board 私董会
 
-A private advisory board powered by perspective skills. When you face a complex question, summon multiple thinkers to analyze it from their unique angles — then let an AI moderator synthesize consensus, disagreements, and actionable next steps.
+> 一个基于得到系老师公开思想与个人学习笔记构建的 AI 私董会能力组合。  
+> 它将刘润、吴军、古典、李笑来、万维钢、芒格等老师的方法论抽象为 `*-perspective` 成员能力，并由 `sidonghui` 统一编排成一套可触发、可讨论、可质询、可收敛、可复盘的 AI 私董会工作流。
 
-## What's Inside
+## 1. 项目背景
 
-### The Board Orchestrator
+我是得到的长期用户，也一直很喜欢得到体系里不同老师的思考方式。
 
-- **sidonghui** — The private board meeting skill. Structures the discussion into 8 steps: topic clarification → member selection → key questions → problem reframing → independent judgments → cross-examination → convergence → action card.
+刘润擅长用商业底层逻辑拆解问题，吴军擅长用工程化和历史视角看趋势，古典擅长处理个人成长与职业发展，李笑来强调长期主义和注意力管理，万维钢提供科学思维和反常识视角，芒格则代表多元思维模型、逆向思考和认知偏误分析。
 
-### Board Members (Perspective Skills)
+这些老师的方法论对我很有帮助，但在真实生活和工作中，我经常遇到的问题并不是单一知识点能解决的，而是复杂的、多变量的、带有不确定性的决策问题，例如：
 
-Each member is a distillation of a real thinker's mental models, decision heuristics, and expression DNA:
+- 职业要不要转型？
+- 副业要不要继续投入？
+- 一个产品方向是否值得做？
+- 一个管理问题到底是人的问题、机制的问题，还是认知的问题？
+- 面对 AI 时代，个人应该如何升级自己的能力结构？
 
-| Member | Focus Area | Key Mental Models |
-|--------|-----------|-------------------|
-| **古典 (Gu Dian)** | Personal development, career transformation | Mental walls, super individual, unique knowledge + niche needs |
-| **李笑来 (Li Xiaolai)** | Investment, long-term thinking, attention management | Compounding accumulation, attention > time > money, OS upgrade |
-| **查理·芒格 (Charlie Munger)** | Multi-disciplinary thinking, investment, psychology | Inversion, latticework of mental models, circle of competence |
-| **万维钢 (Wan Weigang)** | Scientific thinking, anti-commonsense, systems | Fox thinking, deliberate practice, humans > AI |
-| **吴军 (Wu Jun)** | Engineering thinking, tech history, general education | Energy + information, stackable progress, historical telescope |
-| **刘润 (Liu Run)** | Business strategy, entrepreneurship, efficiency | Underlying logic, evolutionary thinking, leverage, value formula |
+过去，我可能会去课程、书籍、笔记里寻找答案。但这些知识往往是分散的，很难在一个具体问题上同时调用多个老师的思考框架。
 
-## How It Works
+所以我做了这个 `Dedao Board 私董会`。
 
-1. You raise a question
-2. The moderator clarifies the topic and selects the most relevant members
-3. Members ask probing questions first (no advice yet)
-4. The moderator reframes your problem
-5. Members give independent judgments
-6. Cross-examination on key disagreements
-7. Moderator converges with prioritized action items
-8. You get a concrete action card with timeline and success criteria
+它不是为了复刻某位老师的原话，也不是替代真人老师，而是基于公开思想、个人学习笔记和我自己的理解，把这些高质量思考方式抽象成可运行的 AI 视角能力。
 
-## How to Use
+当我遇到复杂问题时，可以像召集一次小型私董会一样，让不同视角参与讨论：
 
-These are [Claude Code skills](https://docs.anthropic.com/en/docs/claude-code). Copy the skill directories into your project's `.claude/skills/` folder:
+- 刘润视角看商业模式、交易结构和效率；
+- 吴军视角看工程拆解、科技趋势和长期规律；
+- 古典视角看个人成长、职业阶段和自我认知；
+- 李笑来视角看长期主义、注意力和复利；
+- 万维钢视角看科学证据、反常识和系统性误判；
+- 芒格视角看逆向思考、能力圈和认知偏误。
 
+最终由 `sidonghui` 作为 AI 主持人，负责组织流程、识别分歧、提炼共识，并把讨论结果收敛为可执行的行动卡。
+
+一句话说：
+
+> 这是一个把“得到系老师的方法论资产”转化为“个人长期陪伴型 AI 决策系统”的实验项目。
+
+## 2. 项目定位
+
+`Dedao Board 私董会` 是一个面向复杂问题的 AI 决策辅助能力组合。
+
+它的核心不是“让多个角色轮流发表观点”，而是通过一套结构化会议流程，帮助用户完成一次高质量思考：
+
+```text
+议题澄清
+→ 成员选择
+→ 关键提问
+→ 问题重构
+→ 独立判断
+→ 交叉质询
+→ 主持人收敛
+→ 行动卡
+→ 后续复盘
 ```
+
+其中：
+
+- `sidonghui` 是私董会主持器，负责识别议题、选择成员、组织讨论、提炼共识与分歧，并生成行动卡。
+- `*-perspective` 是不同老师视角的成员能力，负责从各自方法论出发提出问题、判断和建议。
+- 用户可以通过一句话触发私董会，也可以点名指定成员参与讨论。
+
+它更适合处理以下类型的问题：
+
+- 职业选择
+- 副业探索
+- 创业判断
+- 产品策略
+- 业务复盘
+- 管理问题
+- 个人成长
+- 复杂长期决策
+
+它的目标不是替用户做决定，而是帮助用户把问题想清楚、把假设看清楚、把行动落下去。
+
+## 3. 一句话定位
+
+`Dedao Board 私董会` 是一个基于得到系老师公开思想与个人学习笔记构建的 AI 多视角决策工作流，能够在用户面对复杂问题时，动态召集多个视角成员能力，通过提问、重构、质询和收敛，最终形成可执行、可复盘的行动卡。
+
+## 4. 解决的问题
+
+很多时候，我们不是缺少信息，而是缺少一个高质量的思考场。
+
+尤其是面对复杂问题时，常见困境包括：
+
+1. **知识分散**  
+   学过很多课程、看过很多书、记过很多笔记，但真实决策时很难快速调用。
+
+2. **视角单一**  
+   容易只从自己的惯性经验出发，看不到隐藏假设、风险和替代路径。
+
+3. **AI 直接给答案，但缺少思考过程**  
+   很多 AI 回答一上来就给建议，却没有先澄清问题、暴露变量和重构议题。
+
+4. **多角色讨论容易变成观点拼盘**  
+   每个人都说了一点，但没有主持人控场，没有交叉质询，也没有最后的行动闭环。
+
+5. **启发很多，行动很少**  
+   看完觉得“很有道理”，但不知道下一步到底做什么、何时验证、如何复盘。
+
+本项目希望把这些问题转化为一个可复用的 AI 工作流：
+
+```text
+从知识笔记
+到思维模型
+到视角能力
+到 AI 私董会
+到行动卡
+到持续复盘
+```
+
+也就是说，它不是一个普通提示词，而是一个个人知识资产工程：
+
+> 把过去学过的好思想，变成未来每次重大决策时都能被调用的 AI 陪伴系统。
+
+## 5. 核心价值
+
+### 5.1 把得到学习资产沉淀为可调用能力
+
+过去的学习笔记通常是静态的：
+
+- 读完一本书
+- 听完一门课
+- 记下一些金句
+- 收藏一些方法论
+
+但这些内容很容易沉睡在笔记软件里。
+
+`Dedao Board 私董会` 尝试把这些静态知识重新组织成动态能力：
+
+- 把老师的方法论抽象成视角能力；
+- 把个人笔记转化为角色的心智模型；
+- 把复杂问题转化为可讨论议题；
+- 把讨论过程转化为行动卡。
+
+### 5.2 让不同老师的思考方式共同参与一个问题
+
+真实问题往往不是单一学科问题。
+
+例如“我要不要转型做 AI 自由职业”这个问题，同时涉及：
+
+- 商业模式
+- 个人能力
+- 家庭现金流
+- 长期趋势
+- 风险偏好
+- 执行路径
+- 心理动机
+
+单一视角很容易偏。  
+私董会的价值，就是让不同思考框架同时参与，并由主持人帮助用户识别共识与分歧。
+
+### 5.3 从观点启发走向行动闭环
+
+本项目强调每次私董会最后必须输出行动卡：
+
+- 下一步动作
+- 负责人
+- 时间窗口
+- 验证标准
+- 风险提醒
+- 下次复盘问题
+
+这样，私董会不是一次“听起来很厉害的讨论”，而是一个能持续陪伴用户成长和决策的执行系统。
+
+## 6. 适用场景
+
+适用于：
+
+1. 重大个人决策，如职业选择、转型判断、学习路径、投资决策。
+2. 业务与管理议题，如战略讨论、团队复盘、产品方向、增长问题、组织协同。
+3. 需要多位人物视角共同分析的问题，如“芒格怎么看”“吴军怎么看”“大家一起讨论这个议题”。
+
+## 7. 不适用场景
+
+不适用于：
+
+1. 只需要单点事实查询或标准答案的问题，例如查概念、查参数、查日期。
+2. 高度专业且必须依赖实时、完整、一手数据才能判断的场景，例如法律定责、医疗诊断、财务审计。
+3. 用户只想快速拿一个结论、不需要追问、重构和多轮讨论的极简任务。
+
+## 8. 输入要求
+
+建议用户提供以下材料：
+
+1. 背景说明：
+   - 业务背景
+   - 目标用户
+   - 当前问题
+
+2. 原始材料：
+   - 文档 / 表格 / 会议纪要 / 数据文件
+   - 字段说明
+   - 业务口径
+
+3. 输出要求：
+   - 输出格式
+   - 使用对象
+   - 篇幅限制
+   - 风格要求
+
+补充建议：
+
+1. 如果是开私董会，最好说明你想解决的是“决策问题、复盘问题、执行问题、战略问题，还是情绪认知问题”。
+2. 如果希望指定成员参与，可直接点名，例如“只让吴军、刘润、芒格发言”。
+3. 如果不确定材料是否完整，也可以先给现有信息，系统会先做议题澄清并指出关键缺失项。
+
+## 9. 输出结果
+
+本能力组合默认输出：
+
+1. 议题澄清结果：原始问题、会议类型、已知事实、隐藏假设、关键缺失信息、目标产出。
+2. 多位成员的关键提问与独立判断。
+3. 主持人对问题的重构、共识与分歧整理、优先级排序。
+4. 最终行动卡：下一步动作、负责人、时间窗口、验证标准、风险提醒、下次复盘问题。
+
+## 10. 工作流程
+
+步骤 1：问题识别  
+识别用户真正要解决的问题，而不是只处理表面诉求。
+
+步骤 2：材料检查  
+检查输入材料是否完整，尤其是事实、口径、时间范围、约束条件和关键信息缺口。
+
+步骤 3：结构化拆解  
+由主持人先澄清议题，再根据问题类型选择最相关的 3-6 位成员参与讨论。
+
+步骤 4：生成初稿  
+先由成员提出关键问题，不急于给建议；随后主持人重构问题，再由成员给出独立判断。
+
+步骤 5：质量校验  
+通过交叉质询识别真实分歧，检查逻辑是否一致、风险是否暴露、建议是否在用户约束下可执行。
+
+步骤 6：最终输出  
+生成可复制、可汇报、可执行、可复盘的最终结果，并沉淀为行动卡。
+
+## 11. 提示词设计原则
+
+1. 先澄清业务目标，再开始讨论，不把模糊问题直接当成明确问题处理。
+2. 先处理口径、边界和事实，再输出结论，避免“材料不清却建议很满”。
+3. 不编造事实，不确定内容必须标注，缺失信息需要单独指出。
+4. 面向多视角分析时，强调“先提问、后判断、再交叉质询”，保证过程而不是只追求结果。
+5. 面向管理层时，优先采用“结论 - 问题 - 原因 - 动作”结构，突出共识、分歧和优先级。
+6. 面向执行层时，必须落到明确动作、负责人、时间窗口和验收标准。
+7. 涉及经营判断、投资判断或重大个人选择时，保留人工复核环节，本项目提供的是高质量辅助判断，不替代最终负责。
+
+## 12. 示例输入
+
+```text
+开个私董会。
+
+我现在在纠结要不要从大厂离职去做一个 AI 创业项目。
+已知信息：
+1. 我现在年包 90 万，家庭有房贷和一个孩子。
+2. 创业方向是企业知识库 + 销售辅助，已经有 2 个朋友愿意一起做。
+3. 目前没有拿投资，只有 10 个月现金流。
+4. 我担心错过 AI 时代机会，但也担心自己是被风口带着跑。
+
+请你先帮我澄清议题，再决定让哪些成员参会。
+如果可以，优先让芒格、吴军、刘润发言。
+最后给我一个行动卡，不要只给鸡汤。
+```
+
+## 13. 快速使用
+
+这是一个 Claude Code 能力仓库。将所需目录复制到你的项目 `.claude/skills/` 下即可使用：
+
+```text
 your-project/
 └── .claude/
     └── skills/
@@ -49,28 +280,62 @@ your-project/
         └── wujun-perspective/
 ```
 
-Then in Claude Code, say:
+在 Claude Code 中可直接这样触发：
 
-- `开个私董会` or `大家怎么看` — activate the board
-- `用吴军的视角` — activate a single member
-- `散会` — end the session
+- `开个私董会`
+- `大家怎么看这个问题`
+- `用吴军的视角分析`
+- `让芒格和刘润一起讨论`
+- `散会`
 
-## Adding New Members
+## 14. 当前包含的成员
 
-The board dynamically discovers all `*-perspective` skills. Add any new perspective skill to the `.claude/skills/` directory and it automatically joins the board.
+| 成员 | 角色定位 | 擅长议题 |
+|------|----------|----------|
+| `sidonghui` | 私董会主持器 | 议题澄清、成员选择、问题重构、分歧收敛、行动卡生成 |
+| `gudian-perspective` | 古典视角 | 个人成长、职业转型、自我认知 |
+| `lixiaolai-perspective` | 李笑来视角 | 投资、长期主义、注意力管理、家庭教育 |
+| `munger-perspective` | 芒格视角 | 多元思维模型、投资判断、认知偏误 |
+| `wanweigang-perspective` | 万维钢视角 | 科学思维、反常识、系统分析 |
+| `wujun-perspective` | 吴军视角 | 工程思维、科技趋势、历史视角、通识判断 |
+| `liurun-perspective` | 刘润视角 | 商业策略、创业、效率、底层逻辑 |
 
-## Structure
+## 15. 机制说明
 
-```
+1. `sidonghui` 会动态发现当前 `.claude/skills/` 下所有 `*-perspective` 成员。
+2. 用户可点名指定成员，也可让主持人自动选择最合适的 3-6 位核心发言人。
+3. 每位成员都基于各自 `SKILL.md` 中沉淀的心智模型、表达风格、价值观与边界进行角色化回应。
+4. 讨论不是简单拼接观点，而是经过提问、重构、判断、交叉质询和收敛后形成最终输出。
+
+## 16. 目录结构
+
+```text
 skills/
-├── sidonghui/                    # Board orchestrator
+├── sidonghui/                    # 私董会主持器
 │   └── SKILL.md
-├── gudian-perspective/           # Gu Dian
+├── gudian-perspective/           # 古典
 │   ├── SKILL.md
-│   └── references/research/      # 6 research documents
-├── liurun-perspective/           # Liu Run
-├── lixiaolai-perspective/        # Li Xiaolai
-├── munger-perspective/           # Charlie Munger
-├── wanweigang-perspective/       # Wan Weigang
-└── wujun-perspective/            # Wu Jun
+│   └── references/research/
+├── liurun-perspective/           # 刘润
+├── lixiaolai-perspective/        # 李笑来
+├── munger-perspective/           # 查理·芒格
+├── wanweigang-perspective/       # 万维钢
+└── wujun-perspective/            # 吴军
 ```
+
+## 17. 如何扩展新成员
+
+1. 新建一个符合 `*-perspective` 命名规则的目录。
+2. 在目录中提供 `SKILL.md`，写清名称、描述、角色规则、核心心智模型、表达风格和边界。
+3. 将其放入 `.claude/skills/` 后，`sidonghui` 即可自动发现并纳入私董会候选成员。
+
+## 18. 重要声明
+
+本项目是个人学习与 AI 工作流探索项目。
+
+1. 本项目不是得到官方产品。
+2. 本项目不代表得到、刘润、吴军、古典、李笑来、万维钢、芒格等任何机构或个人立场。
+3. 本项目不会复刻课程原文，也不以替代原课程、原书籍或真人老师为目标。
+4. 各视角成员能力仅基于公开思想、个人学习笔记和作者自己的理解进行方法论抽象。
+5. 如果你喜欢这些老师的思想，仍然建议阅读原书、原课程和公开内容。
+6. 本项目提供的是辅助思考和决策支持，不替代用户本人判断。
